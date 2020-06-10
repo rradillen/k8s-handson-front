@@ -30,4 +30,6 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_TOKEN }}
         repository: rf31415/k8s-handson-front
-        tags: latest
+        tags: 
+          - latest
+          - ${{ steps.vars.outputs.sha_short }}
